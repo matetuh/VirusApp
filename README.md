@@ -1,5 +1,7 @@
 # VirusApp
 
+SIRS model of Albert Barabasi network. A group project on the Complex Systems course to simulate the spread of the virus in society. I was responsible for visualizing a neural network of sick, healed and neutral nodes in Python. I was involved in creating C# .Net window application that showed the virus incidence in society on graphs.
+
 ## How the plot_network.py script works?
 
 * The plot_network script was written in Python language. It draws the neural netowrk diagrams from a text data file.
@@ -19,3 +21,15 @@ At the end we show the plot and save it with big dpi in PDF and PNG file format.
 ![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/sample_plots.png)
 
 Fig.1. Albert Barabasi network of SIRS model plotted using four different layouts (random, circular, spring, spectral). Parameter used in simulation: n = 500, m0 = 1, m = 1, prob. S-I = 0.9, prob. I-R = 0.5, prob. R-S - 0.5, percent of I = 1.
+
+## How the Virus Spread App works ?
+
+We've created a window application that helps us visualize the simulation of the SIRS model. The application was written in C #. It uses .exe program written in C ++. When opening the application, the following window appears to us:
+![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread1.png)
+In the left side panel we can choose the Barabassi network parameters and SIRS simulation parameters. Then we click "Initialize", and the application saves the data to „ini_parameters.txt” file.
+![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread2.png)
+After that the „Barabassi_Network.exe” ( a „.cpp” file ) is called from the VIRUS SPREAD App. Then The „Barabassi_Network.exe” gives an output. We get three text data files - „nodes.txt”, „edges.txt” and „virus_spread.txt”. In this case we need only the third file. Then the application reads the text file and puts i tinto the „dataVievGrid”. We get spread sheet with four columns (t, S, I, R), where t is the time, S is the number of health people, I the number of infected people and R is the number of removed /recovered people. At the end the data is plotted on the line chart.
+The application gives us the opportunity to save the chart to the png format. 
+We can see the spreadsheet with the „virus_spread.txt”. text data file, after clicking on the „Show Data” button.
+![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread3.png)
+The application gives us the opportunity to save the data to the text format. 
