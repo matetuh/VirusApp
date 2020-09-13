@@ -25,11 +25,17 @@ Fig.1. Albert Barabasi network of SIRS model plotted using four different layout
 ## How the Virus Spread App works ?
 
 We've created a window application that helps us visualize the simulation of the SIRS model. The application was written in C #. It uses .exe program written in C ++. When opening the application, the following window appears to us:
+
 ![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread1.png)
+
 In the left side panel we can choose the Barabassi network parameters and SIRS simulation parameters. Then we click "Initialize", and the application saves the data to „ini_parameters.txt” file.
+
 ![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread2.png)
+
 After that the „Barabassi_Network.exe” ( a „.cpp” file ) is called from the VIRUS SPREAD App. Then The „Barabassi_Network.exe” gives an output. We get three text data files - „nodes.txt”, „edges.txt” and „virus_spread.txt”. In this case we need only the third file. Then the application reads the text file and puts i tinto the „dataVievGrid”. We get spread sheet with four columns (t, S, I, R), where t is the time, S is the number of health people, I the number of infected people and R is the number of removed /recovered people. At the end the data is plotted on the line chart.
 The application gives us the opportunity to save the chart to the png format. 
 We can see the spreadsheet with the „virus_spread.txt”. text data file, after clicking on the „Show Data” button.
+
 ![alt text](https://raw.githubusercontent.com/matetuh/VirusApp/master/virusspread3.png)
+
 The application gives us the opportunity to save the data to the text format. 
